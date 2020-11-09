@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+ll gcd(ll a, ll b)
+{
+    if (a == 0)
+        return b;
+    return gcd(b % a, a);
+}
+ll lcm(ll a, ll b)
+{
+ return (a*b)/gcd(a, b);
+}
+]]></content>
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<tabTrigger>lcm</tabTrigger>
+</snippet>
