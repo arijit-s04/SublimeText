@@ -67,58 +67,7 @@ int main()
     cin>>t;
     for(ll _=0;_<t;_++)
     {
-        ll n;
-        cin>>n;
-        ll a[n+1]={0};
-        fi(0,n)
-            cin>>a[i+1];
-        ll pan=0,ans[n+1]={0};
-
-        ll i=1;
-        while(i<n){
-            ans[i]=max(pan+a[i],ans[i-1]);
-            pan+=a[i]-(a[i]%2);
-            if(a[i]==1){
-                ll tmp=a[i-1]%2;
-                if(tmp==0){
-                    for (ll j=1;a[i]==1 && i<n;j++,i++){
-                        pan-=(j%2);
-                        pan+=2*(j%2==0);
-                        ans[i+1]=max(ans[i],pan+a[i+1]);
-                    }
-                }
-                else{
-                    for (ll j=1;a[i]==1 && i<n;j++,i++){
-                        pan+=(j%2==1);
-                        ans[i+1]=max(ans[i],pan+a[i+1]);
-                    }   
-                }
-                i--;
-            }
-
-            i++;
-        }
-        ans[i]=max(a[i-1],pan+a[i]);
-        pan+=a[i]-(a[i]%2==0);
-        debug(pan);
-        fauto(ans)
-            cout<<it<<" ";cout<<endl;
-
-        ll q;
-        cin>>q;
-        while(q--){
-            ll r,mastr;
-            cin>>r;
-            mastr=(r/n)*pan;
-            if(r%n!=0)
-                mastr+=ans[r%n];
-            else{
-                mastr-=pan;
-                mastr+=ans[n];
-            }
-            cout<<mastr<<endl;
-        }
-
+        
     }
     clk_end=clock();
 
